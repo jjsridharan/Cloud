@@ -1,0 +1,1 @@
+sshpass -p student ssh -Xt sridharan@192.168.43.124 echo $DISPLAY; bash -l 2>>as
