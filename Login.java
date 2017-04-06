@@ -82,9 +82,20 @@ import java.util.*;
 			else
 			{
 				String s[]={server,user,area1.getText()};
-				Display c=new Display();
-				c.main(s);
-				//System.out.print(server);
+				
+				try {
+					String data = " This is new content";
+					File file = new File("cre.txt");
+					FileWriter fw = new FileWriter(file.getAbsoluteFile());
+					BufferedWriter bw = new BufferedWriter(fw);
+					bw.write(s[0]+" "+s[1]+" "+s[2]);
+					bw.close();
+					fw.close();
+					System.exit(0);
+				} catch (IOException ee) {
+
+					ee.printStackTrace();
+				}
 				dispose();
 			}
     		}
